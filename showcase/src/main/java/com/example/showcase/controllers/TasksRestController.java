@@ -15,6 +15,8 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.UUID;
 
+
+
 //простой рест контроллер с 3 ендПоинтами:
 //получение списка задач; добавление новой задачи; получение задачи по id
 
@@ -24,7 +26,9 @@ public class TasksRestController {
 
     private final TaskRepository taskRepository;
 
-    //сервис для перевода логов на человеческий язык, а уже на какой язык мы можем использовать локаль(Local) для определения; Используется файл messages.properties где записаны логи и их перевод
+    //сервис для перевода логов на человеческий язык,
+    // а уже на какой язык мы можем использовать локаль(Local) для определения;
+    // Используется файл messages.properties где записаны логи и их перевод
     private final MessageSource messageSource;
 
     public TasksRestController(TaskRepository taskRepository, MessageSource messageSource) {
@@ -57,10 +61,11 @@ return ResponseEntity.badRequest()//билдим ответ
             var task = new Task(payload.details());
             this.taskRepository.save(task);
             return ResponseEntity.created(uriComponentsBuilder
-                            .path("/api/tasks/{taskId}") //путь созданного объекта
-                            .build(Map.of("taskId", task.id())))//указываем что в переменной пути явл id
+                            .path("/api/tasks/{taskId}") //назначаем путь создаваемого объекта
+                            .build(Map.of("taskId", task.id())))//указываем что в переменной пути(URI) явл id
                     .contentType(MediaType.APPLICATION_JSON)
                     .body(task);
+
         }
 
     }

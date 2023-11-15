@@ -12,8 +12,8 @@ import java.util.UUID;
 public class InMemTaskRepository implements TaskRepository{
 
     private static List<Task> tasks=new LinkedList<>(){{
-        this.add(new Task("Первая задача"));
-        this.add(new Task("Вторая задача"));
+//        this.add(new Task("Первая задача"));
+//        this.add(new Task("Вторая задача"));
     }};
 
     @Override
@@ -30,5 +30,9 @@ public class InMemTaskRepository implements TaskRepository{
     public Optional<Task> findById(UUID id) {
         return this.tasks.stream()
                 .filter(task -> task.id().equals(id)).findFirst();
+    }
+
+    public static List<Task> getTasks() {
+        return tasks;
     }
 }

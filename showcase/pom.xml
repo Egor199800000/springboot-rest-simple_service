@@ -31,6 +31,31 @@
 			<scope>test</scope>
 		</dependency>
 
+<!--		БД-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-jdbc</artifactId>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>org.postgresql</groupId>-->
+<!--			<artifactId>postgresql</artifactId>-->
+<!--		</dependency>-->
+<!--&lt;!&ndash;		для написание миграци в ДБ &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.flywaydb</groupId>-->
+<!--			<artifactId>flyway-core</artifactId>-->
+<!--		</dependency>-->
+<!--&lt;!&ndash;		Для интеграционных тестов
+чтобы БД каждый раз поднималась в Docker-упаковщик java-проектов
+&ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.testcontainers</groupId>-->
+<!--			<artifactId>postgresql</artifactId>-->
+<!--			<version>1.17.6</version>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
+
+
 
 
 

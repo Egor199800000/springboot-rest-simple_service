@@ -25,7 +25,7 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-
+//МОДУЛЬНОЕ ТЕСТИРОВАНИЕ
 //Покрываем наш контроллер модульными тестами
 @ExtendWith(MockitoExtension.class)
 public class TasksRestControllerTest {
